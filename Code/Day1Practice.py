@@ -29,5 +29,5 @@ X_train, X_test, Y_train, Y_test = train_test_split(X_arr, Y_arr, test_size=0.2)
 
 # Step 6: Normalize input
 standardscalar = StandardScalar()
-X_train = standardscalar.fit_transform(X_train)
-X_test = standardscalar.fit_transform(X_test)
+X_train = standardscaler.fit_transform(X_train)  # it's not StandardScalar
+X_test = standardscaler.fit_transform(X_test)  # it's not StandardScalar
