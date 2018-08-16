@@ -28,6 +28,7 @@ X_arr = onehotencoder.fit_transform(X_arr)
 X_train, X_test, Y_train, Y_test = train_test_split(X_arr, Y_arr, test_size=0.2)
 
 # Step 6: Normalize input
-standardscalar = StandardScalar()
-X_train = standardscaler.fit_transform(X_train)  # it's not StandardScalar
-X_test = standardscaler.fit_transform(X_test)  # it's not StandardScalar
+standardscaler = StandardScaler() # it's not StandardScalar
+X_train = standardscaler.fit_transform(X_train)  
+X_test = standardscaler.fit_transform(X_test)  
+
