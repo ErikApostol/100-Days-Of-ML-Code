@@ -17,6 +17,7 @@ X_arr[:, 1:] = imputer.fit_transform(X_arr[:, 1:]) # Strings cannot be imputed.
 # Step 4: Turn categorical variables into numbers
 # LabelEncoder
 labelencoder = LabelEncoder()
+X_arr[:, 0] = labelencoder.fit_transform(X_arr[:, 0]) # Only after label-encoding it can be one-hot-encoded.
 Y_arr = labelencoder.fit_transform(Y_arr)
 # OneHotEncoder
 # sparse : boolean, default=True. Will return sparse matrix if set True, else will return an array.
