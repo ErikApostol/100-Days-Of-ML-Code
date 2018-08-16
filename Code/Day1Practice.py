@@ -20,7 +20,7 @@ labelencoder = LabelEncoder()
 Y_arr = labelencoder.fit_transform(Y_arr)
 # OneHotEncoder
 # sparse : boolean, default=True. Will return sparse matrix if set True, else will return an array.
-onehotencoder = OneHotEncoder(categorical_variables=[0], sparse=False) 
+onehotencoder = OneHotEncoder(categorical_features=[0], sparse=False)  # It's not "categorical_variables".
 Y_arr = onehotencoder.fit_transform(Y_arr)
 
 # Step 5: trans_test_split
