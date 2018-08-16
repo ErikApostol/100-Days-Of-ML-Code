@@ -12,7 +12,7 @@ Y_arr = df.iloc[:, -1].values
 
 # Step 3: impute some values to cells with missing data
 imputer = Imputer(missing_values='NaN', strategy='median', axis=0)
-X_arr = imputer.fit_transform(X_arr)
+X_arr[:, 1:] = imputer.fit_transform(X_arr[:, 1:]) # Strings cannot be imputed.
 
 # Step 4: Turn categorical variables into numbers
 # LabelEncoder
