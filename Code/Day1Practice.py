@@ -2,8 +2,8 @@
 # The two must-imports: pandas and numpy
 import pandas as pd # import and manage PANel DAta Sets
 import numpy as np  # mathematical functions
-from sklearn.preprocessing import Imputer, LabelEncoder, OneHotEncoder, StandardScalar
-from sklearn.crossvalidation import train_test_split
+from sklearn.preprocessing import Imputer, LabelEncoder, OneHotEncoder, StandardScaler # it's not StandardScalar
+from sklearn.model_selection import train_test_split # crossvalidation is deprecated, should use model_selection
 
 # Step 2: import data
 df = pd.read_csv("Data.csv") # Do not take any line as header
